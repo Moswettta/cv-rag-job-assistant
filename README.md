@@ -23,10 +23,7 @@ A practical Streamlit application that helps you improve your CV and job applica
 # 1. Install dependencies (recommended inside a virtual environment)
 pip install -r requirements.txt
 
-# 2. Go to the app folder
-cd cv_rag_app   # or just the root if you cloned this repo
-
-# 3. Launch
+# 2. Launch
 streamlit run app.py
 ```
 
@@ -46,9 +43,9 @@ Then open the URL shown in the terminal (usually http://localhost:8501).
 ## Technical Notes
 
 - **RAG**: Uses `sentence-transformers` (`all-MiniLM-L6-v2`) when available, otherwise falls back to TF-IDF + cosine similarity.
-- **ATS scoring** is heuristic (length, sections, keywords, action verbs, quantifiable results, contact info). Useful guide, not a guarantee.
+- **ATS scoring** is heuristic. Useful guide, not a guarantee.
 - Online job search is best-effort; many job boards block scrapers. Direct search links are always provided.
-- No data leaves your machine except the optional DuckDuckGo search query.
+- Experience is calculated from actual date ranges (not crude year counting).
 
 ## Requirements
 
